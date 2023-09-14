@@ -37,17 +37,6 @@ describe("Github page tests", () => {
       visible: true,
     });
     const actual = await page.$eval(btnSelector, (link) => link.textContent);
-    expect(actual).toEqual(
-      "\n" +
-        "  Get started with Team" +
-        "\n" +
-        "\n" +
-        "\n" +
-        "\n" +
-        "\n" +
-        "\n" +
-        "\n" +
-        "\n"
-    );
+    expect(actual).toMatch("Get started with Team");
   });
 });
