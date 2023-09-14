@@ -37,9 +37,9 @@ test("Неуспешная авторизация", async ({ page }) => {
   // Нажимаем на кнопку Войти
   await page.click("text=Войти");
 
-  await expect(page.locator("div [data-testid='login-error-hint']")).toHaveText(
-    "Вы ввели неправильно логин или пароль"
-  );
+  await expect(
+    page.getByText("Вы ввели неправильно логин или пароль")
+  ).toBeVisible();
 
   await page.close();
 });
