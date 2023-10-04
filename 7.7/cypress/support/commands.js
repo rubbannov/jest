@@ -23,22 +23,20 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import adminpageSelector from "../fixtures/adminpage.selectors.json";
 
-Cypress.Commands.add("login", (email, password) => {
-  cy.contains("Log in").click();
-  cy.get("#mail").type(email);
-  cy.get("#pass").type(password);
-  cy.contains("Submit").click();
+Cypress.Commands.add("login", (login, password) => {
+  cy.get(adminpageSelector.loginField).type(login);
+  cy.get(adminpageSelector.passwordField).type(password);
+  cy.get(adminpageSelector.loginButton).click();
 });
 
-Cypress.Commands.add("addBook", (title, description, authors) => {
-  cy.contains("Add new").click();
-  cy.get("#title").type(title);
-  cy.get("#description").type(description);
-  cy.get("#authors").type(authors);
-  cy.contains("Submit").click();
+Cypress.Commands.add("selectSeats", (row, seat) => {
+  cy.get(
+    `.buying-scheme__wrapper > :nth-child(${row}) > :nth-child(${seat})`
+  ).click();
 });
 
-Cypress.Commands.add("addToFavorite", (bookTitle) => {
-  cy.get("div").contains(bookTitle).contains("Add to favorite").click();
+Cypress.Commands.add("checkNameMovie", (movieName) => {
+  cy.contains(movieName).should("be.visible");
 });

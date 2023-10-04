@@ -24,9 +24,21 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("login", (login, password) => {
+Cypress.Commands.add("login", (email, password) => {
   cy.contains("Log in").click();
-  cy.get("#mail").type(login);
+  cy.get("#mail").type(email);
   cy.get("#pass").type(password);
   cy.contains("Submit").click();
+});
+
+Cypress.Commands.add("addBook", (title, description, authors) => {
+  cy.contains("Add new").click();
+  cy.get("#title").type(title);
+  cy.get("#description").type(description);
+  cy.get("#authors").type(authors);
+  cy.contains("Submit").click();
+});
+
+Cypress.Commands.add("addToFavorite", (bookTitle) => {
+  cy.get("div").contains(bookTitle).contains("Add to favorite").click();
 });

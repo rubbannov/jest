@@ -1,0 +1,6 @@
+{
+    "dateToday": ".page-nav__day_today > .page-nav__day-number",
+    "tomorrow": ".page-nav__day:nth-of-type(2)",
+    "timeOfSeance": "*[data-seance-id='173']",
+    "bookingButton": ".acceptin-button"
+}

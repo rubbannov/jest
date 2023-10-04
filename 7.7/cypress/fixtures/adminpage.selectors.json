@@ -1,0 +1,10 @@
+{
+    "pageSubtitle": ".page-header__subtitle",
+    "loginTitle": ".login__title",
+    "hallControl": "#hall-control > .conf-step__header > .conf-step__title",
+    "hallsList": "#hall-control > div > ul > li",
+    "movie": "[data-film-id='99'] > .conf-step__movie-title",
+    "loginField": "[for='email'] > .login__input",
+    "passwordField": "[for='pwd'] > .login__input",
+    "loginButton": ".login__button"
+}
