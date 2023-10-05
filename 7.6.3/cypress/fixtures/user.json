@@ -1,0 +1,22 @@
+{
+    "userJack": {
+        "id": 676,
+        "username": "capitainOfBLACK_PEARL",
+        "firstName": "Jack",
+        "lastName": "Sparrow",
+        "email": "cap.jack.sparrow@netology.com",
+        "password": "Black1234Pearl",
+        "phone": "+123456677",
+        "userStatus": 1
+    },
+    "changeDataUser": {
+        "firstName": "Hector",
+        "lastName": "Barbossas",
+        "id": 676,
+
+        "email": "cap.jack.sparrow@netology.com",
+        "password": "Black1234Pearl",
+        "phone": "+123456677",
+        "userStatus": 1
+    }
+}

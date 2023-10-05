@@ -1,0 +1,12 @@
+{
+    "successfulResponse": {
+        "code": 200,
+        "type": "unknown",
+        "message": "676"
+    },
+    "successfulDELETE": {
+        "code": 200,
+        "type": "unknown",
+        "message": "capitainOfBLACK_PEARL"
+    }
+}
