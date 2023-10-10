@@ -30,12 +30,12 @@ describe(
         .and("have.text", "Добро пожаловать " + users.testUserEmail);
     });
 
-    // it("Добавление книги в библиотеку", () => {
-    //   cy.login(users.userEmail, users.userPass);
-    //   cy.addBook(book1.title, book1.description, book1.authors);
-    //   cy.addBook(book2.title, book2.description, book2.authors);
-    //   cy.addBook(book3.title, book3.description, book3.authors);
-    // });
+    it("Добавление книги в библиотеку", () => {
+      cy.login(users.userEmail, users.userPass);
+      cy.addBook(book1.title, book1.description, book1.authors);
+      cy.addBook(book2.title, book2.description, book2.authors);
+      cy.addBook(book3.title, book3.description, book3.authors);
+    });
 
     it("Добавление книги в избранное", () => {
       cy.login(users.userEmail, users.userPass);
