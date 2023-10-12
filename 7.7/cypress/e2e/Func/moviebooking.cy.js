@@ -1,7 +1,7 @@
-import adminSelector from "../fixtures/adminpage.selectors.json";
-import mainpageSelector from "../fixtures/mainpage.selectors.json";
-import users from "../fixtures/admin.json";
-import seats from "../fixtures/seats.json";
+import adminSelector from "../../fixtures/adminpage.selectors.json";
+import mainpageSelector from "../../fixtures/mainpage.selectors.json";
+import users from "../../fixtures/admin.json";
+import seats from "../../fixtures/seats.json";
 
 describe("UI-тест для бронирования фильма в доступный зал", () => {
   it("Берем название фильма и бронируем его как посетитель", () => {

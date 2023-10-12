@@ -1,4 +1,4 @@
-import selector from "../fixtures/mainpage.selectors.json";
+import selector from "../../fixtures/mainpage.selectors.json";
 
 describe("Проверка корректности отображения главной страницы", () => {
   beforeEach(() => {

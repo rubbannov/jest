@@ -1,5 +1,5 @@
-import users from "../fixtures/admin.json";
-import selector from "../fixtures/adminpage.selectors.json";
+import users from "../../fixtures/admin.json";
+import selector from "../../fixtures/adminpage.selectors.json";
 
 describe("Проверка входа в админпанель", () => {
   beforeEach(() => {

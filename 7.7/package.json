@@ -4,10 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:booking": "cypress run --record --group booking --spec \"cypress/e2e/moviebooking.cy.js\" --ci-build-id 5",
-    "test:mainpage": "cypress run --record --group mainpage --spec \"cypress/e2e/mainpage.cy.js\" --ci-build-id 5",
-    "test:adminpanel": "cypress run --record --group adminpanel --spec \"cypress/e2e/adminpanel.cy.js\" --ci-build-id 5",
-    "test:parallel": "run-p -c test:booking test:mainpage test:adminpanel"
+    "test:func:booking:chrome": "cypress run --record --group func-booking-chrome --spec \"cypress/e2e/Func/moviebooking.cy.js\" -b chrome",
+    "test:pages:mainpage:chrome": "cypress run --record --group pages-mainpage-chrome --spec \"cypress/e2e/Pages/mainpage.cy.js\" -b chrome",
+    "test:func:viewName:chrome": "cypress run --record --group func-viewname-chrome --spec \"cypress/e2e/Func/viewName.cy.js\" -b chrome",
+    "test:pages:adminpanel:chrome": "cypress run --record --group pages-adminpanel-chrome --spec \"cypress/e2e/Pages/adminpanel.cy.js\" -b chrome",
+    "test:parallel:chrome": "run-p -c test:func:booking:chrome test:pages:mainpage:chrome test:func:viewName:chrome test:pages:adminpanel:chrome",
+
+    "test:func:booking:firefox": "cypress run --record --group func-booking-firefox --spec \"cypress/e2e/Func/moviebooking.cy.js\" -b firefox",
+    "test:pages:mainpage:firefox": "cypress run --record --group pages-mainpage-firefox --spec \"cypress/e2e/Pages/mainpage.cy.js\" -b firefox",
+    "test:func:viewName:firefox": "cypress run --record --group func-viewname-firefox --spec \"cypress/e2e/Func/viewName.cy.js\" -b firefox",
+    "test:pages:adminpanel:firefox": "cypress run --record --group pages-adminpanel-firefox --spec \"cypress/e2e/Pages/adminpanel.cy.js\" -b firefox",
+    "test:parallel:firefox": "run-p -c test:func:booking:firefox test:pages:mainpage:firefox test:func:viewName:firefox test:pages:adminpanel:firefox",
+
+    "test:func:booking:electron": "cypress run --record --group func-booking-electron --spec \"cypress/e2e/Func/moviebooking.cy.js\" -b electron",
+    "test:pages:mainpage:electron": "cypress run --record --group pages-mainpage-electron --spec \"cypress/e2e/Pages/mainpage.cy.js\" -b electron",
+    "test:func:viewName:electron": "cypress run --record --group func-viewname-electron --spec \"cypress/e2e/Func/viewName.cy.js\" -b electron",
+    "test:pages:adminpanel:electron": "cypress run --record --group pages-adminpanel-electron --spec \"cypress/e2e/Pages/adminpanel.cy.js\" -b electron",
+    "test:parallel:electron": "run-p -c test:func:booking:electron test:pages:mainpage:electron test:func:viewName:electron test:pages:adminpanel:electron",
+
+    "test:parallel:chrome-firefox": "run-p -c test:parallel:chrome test:parallel:firefox"
   },
   "author": "",
   "license": "ISC",
